@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>PoundDonate - Making donating simple and social.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PoundDonate - Making donating simple and social. Fund raising can be easy using PoundDonate. Just send a tweet and watch your donations go viral.">
+    <meta name="keywords" content="pounddonate,donations,fundraising,payments,social,micro payments,viral, hashdonate poundgive">
+    <meta name="author" content="PoundDonate">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/pounddonate.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/favicon.png">
+  </head>
+  <body>
+	  <%- partial( 'header' ) %>
+    <div class="container">
+      <%- body %>
+      <hr/>
+    
+    
+    </div>
+    <%- partial( 'privacy' ) %>
+    <%- partial( 'terms' ) %>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/pounddonate.js"></script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>    
+    <script type="text/javascript">
+      <% if ( typeof twitterUser != 'undefined' ) { %>
+      var username = '<%= twitterUser.username %>'
+      username = username.toLowerCase()
+      <% } %>
+    </script>
+
+   
+  </body>
+</html>

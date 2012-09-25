@@ -1,0 +1,27 @@
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+	version: 2,
+	type: 'profile',
+	interval: 30000,
+	width: 'auto',
+	height: 300,
+	theme: {
+		shell: {
+			background: '#2c2c2c',
+			color: '#ffffff'
+		},
+		tweets: {
+			background: '#ffffff',
+			color: '#666666',
+			links: '#0088cc'
+		}
+	},
+	features: {
+		scrollbar: true,
+		loop: false,
+		live: true,
+		behavior: 'all'
+	}
+}).render().setUser('<%= twitterUser.username %>').start();
+</script>

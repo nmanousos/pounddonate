@@ -1,0 +1,70 @@
+<% pagename = 'index' %>
+<div class="hidden-phone" style="margin-bottom: 30px;">
+	<img src="/img/anatomyHero.png" />
+</div>
+
+<h1 class="visible-phone">Making donating simple and social.</h1>
+<hr class="visible-phone"/>
+
+<div class="row">
+	<div class="span12">
+		<h2>How it works</h2>
+		<div class="equation">
+			<img src="/img/twitter_logo.png" alt="Twitter logo"/>
+			<h1>+</h1>
+			<img src="/img/paypal_logo.png" alt="PayPal logo" width="125"/>
+		</div>
+		<ul>
+			<li class="lead">PoundDonate links Twitter and PayPal accounts.</li>
+			<li class="lead">PoundDonate watches the #donate hashtag.</li>
+			<li class="lead">When PoundDonate sees a #donate retweet a PayPal transaction is completed.</li>
+		</ul>      
+	</div>
+</div>
+<hr style="color: #c5c5c5"/>
+<div class="row">
+	<div class="span8">
+		<h2>Fundraising Benefits</h2>
+		<div class="equation">
+			<img src="/img/bubbles.png" alt="Retweets" />
+			<h1>=</h1>
+			<img src="/img/graph.png" alt="Virality" />
+		</div>
+		<ul>
+			<li class="lead">Raising money is as simple as asking for a retweet.</li>
+			<li class="lead">Donations + social influence = virality.</li>
+			<li class="lead">Advertise your cause on Twitter and raise money at the same time.</li>
+	</div>
+	<div class="span4">
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+		new TWTR.Widget({
+			version: 2,
+			type: 'search',
+			search: '#donate',
+			interval: 1000,
+			title: 'Capture this traffic!',
+			subject: '#donate',
+			width: 'auto',
+			height: 250,
+			theme: {
+				shell: {
+					background: '#2c2c2c',
+					color: '#ffffff'
+				},
+				tweets: {
+					background: '#ffffff',
+					color: '#666666',
+					links: '#0088cc'
+				}
+			},
+			features: {
+				scrollbar: true,
+				loop: true,
+				live: true,
+				behavior: 'default'
+			}
+		}).render().start();
+		</script>	
+	</div>
+</div>

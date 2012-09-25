@@ -1,0 +1,11 @@
+<% tweet_text = '%241%20to%20@'+twitterUser.username %>
+
+<div class="card clearfix">
+	<h3>@<a href="/<%= twitterUser.username %>"><%= twitterUser.username %></a></h3>
+	<div class="card_inner">
+		<a href="/<%= twitterUser.username %>"><img class="pull-left" src="https://api.twitter.com/1/users/profile_image/<%= twitterUser.username %>?size=bigger"/></a>
+		<a href="https://twitter.com/intent/tweet?button_hashtag=donate&text=<%= tweet_text %>" class="twitter-hashtag-button" data-size="large">Tweet #donate</a>
+		<% if( twitterUser.extended_data ) { %><p class="followers_count"><%= twitterUser.extended_data[0].followers_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> followers</p><% } %>
+		<% if ( total > 0 ) { %><p style="display:none;">$<%= total.toFixed(2) %> raised from <%= total_incoming %> <%= verb %></p><% } %>
+	</div>
+</div><br style="clear:both;"/>

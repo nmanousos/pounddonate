@@ -1,0 +1,32 @@
+<% pagename = 'donate' %>
+<% tweet_text = '%241%20to%20@'+twitterUser.username %>
+<% call_to_action = 'Donate socially' %>
+<% explanation = 'Show your support. Even the smallest donation helps!' %>
+
+<% if ( user ) { %>
+	<% if( twitterUser.username.toLowerCase() == user.username.toLowerCase() ) { %>
+		<% pagename = 'raise' %>
+		<% tweet_text = 'RT%20to%20donate%20%241%20to%20me!' %>
+		<% call_to_action = 'Start fundraising' %>
+		<% explanation = 'Tweet a request for donations to start fundraising!' %>		
+	<% } %>
+<% } %>
+<% user = twitterUser %>
+
+<div class="row">
+	<div class="span8">
+	<%- partial( 'card_header' ) %>	
+	<% if ( pagename == 'raise' ) { %>
+		<%- partial( 'incoming' ) %>
+	<% } else if ( twitterUser && twitterUser.payments_incoming ) { %>
+		<%- partial( 'feed' ) %>
+	<% } else { %>
+		<%- partial( 'feed' ) %>
+	<% } %>
+	</div>
+	<div class="span4">
+
+		<%- partial( 'totals' ) %>
+		<%- partial( 'explanation' ) %>
+	</div>
+</div>

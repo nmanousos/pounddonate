@@ -1,0 +1,33 @@
+<% pagename = 'admin' %>
+
+<h2>Users</h2>
+
+<table id="admin" class="table table-bordered table-striped">
+<thead><th>name</th><th>twitter auth</th><th>paypal viewed</th><th>paypal approved</th><th>created date</th></thead>
+<tbody>
+<% for ( var i=0; i < users.length; i++ ) { %>	
+<tr>
+	<td><a href="/admin/<%= users[i].username %>"><%= users[i].username %></a></td>
+	<td><% if( users[i].token ) { %>true<% } else { %>false<% } %></td>
+	<td><% if( users[i].preapproval_key ) { %>true<% } else { %>false<% } %></td>
+	<td><% if( users[i].email ) { %>true<% } else { %>false<% } %></td>
+	<td><%= users[i].created %></td>	
+</tr>
+<% } %>
+</tbody>
+</table>
+
+<h2>rateLimitStatus</h2>
+<p>
+reset_time: <%= rateLimitStatus.reset_time %><br/>
+remaining_hits: <%= rateLimitStatus.remaining_hits %><br/>
+hourly_limit: <%= rateLimitStatus.hourly_limit %><br/>
+reset_time_in_seconds: <%= rateLimitStatus.reset_time_in_seconds %><br/>
+photos.daily_limit: <%= rateLimitStatus.photos.daily_limit %><br/>
+photos.reset_time: <%= rateLimitStatus.photos.reset_time %><br/>
+photos.remaining_hits: <%= rateLimitStatus.photos.remaining_hits %><br/>
+photos.reset_time_in_seconds: <%= rateLimitStatus.photos.reset_time_in_seconds %>
+</p>
+
+<h2>Stream</h2>
+<div id="stream"></div>

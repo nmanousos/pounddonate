@@ -1,0 +1,91 @@
+{	"categories": [
+		{ "name": "Charities",
+			"key": "charities",
+			"donatees": [
+				{ "username": "ASPCA" },
+				{ "username": "PETA" },
+				{ "username": "MakeAWish" },
+				{ "username": "MarchOfDimes" },
+				{ "username": "creativecommons" },
+				{ "username": "charitywater" },
+				{ "username": "ntl_homeless" },
+				{ "username": "homelessvoice" },
+				{ "username": "homelesscenter" },
+				{ "username": "pathpartners" },
+				{ "username": "shelternetwork" },
+				{ "username": "homelessamerica" },
+				{ "username": "nlchphomeless" },
+				{ "username": "familyhomeless" },
+				{ "username": "safeplace" },
+				{ "username": "care" },
+				{ "username": "globalgiving" },
+				{ "username": "msf_usa" },
+				{ "username": "onecampaign" },
+				{ "username": "salvationarmyus" },
+				{ "username": "heifer" },
+				{ "username": "water" }		
+				
+			]
+		},
+		{ "name": "Politics",
+			"key": "politics",
+			"donatees": [
+				{ "username": "BarackObama" },
+				{ "username": "MittRomney" },
+				{ "username": "Dennis_Kucinich" },
+				{ "username": "clairecmc" },
+				{ "username": "SenBillNelson" },
+				{ "username": "JoeSestak" },
+				{ "username": "johnboehner" },
+				{ "username": "JohnBoozman" },
+				{ "username": "JimDeMint" },
+				{ "username": "OrrinHatch" },
+				{ "username": "kevinomccarthy" },
+				{ "username": "RonPaulforCong" },
+				{ "username": "RobWittman" },
+				{ "username": "corybooker" },
+				{ "username": "JerryBrownGov" }
+			]
+		},	
+		
+
+		{ "name": "Health / Disease",
+			"key": "health",
+			"donatees": [
+				{ "username": "joinred" },
+				{ "username": "livestrong" },
+				{ "username": "su2c" },
+				{ "username": "pancan" },
+				{ "username": "cancerlgbt" },
+				{ "username": "aacr" },
+				{ "username": "acscan" },
+				{ "username": "aidshealthcare" },
+				{ "username": "napwaus" },
+				{ "username": "actionaids" },
+				{ "username": "napwa" },
+				{ "username": "thewellproject" },
+				{ "username": "lungassociation" },
+				{ "username": "zerocancer" },
+				{ "username": "cancer_research" },
+				{ "username": "preventad" },
+				{ "username": "fishercenter" },
+				{ "username": "american_heart" },
+				{ "username": "natlstrokeassoc" },
+				{ "username": "amdiabetesassn" }
+			]
+		},		
+		{ "name": "Environmental",
+			"key": "environmental",
+			"donatees": [
+				{ "username": "Greenpeace" },
+				{ "username": "Habitat_org" }
+			]
+		},				
+		{ "name": "Disaster Relief",
+			"key": "disaster",
+			"donatees": [
+				{ "username": "RedCross" }
+			]
+		}
+	]
+}

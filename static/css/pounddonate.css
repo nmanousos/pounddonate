@@ -1,0 +1,290 @@
+body { 
+	padding-top: 60px;
+  background: url('/img/light_bg.png');
+}
+
+#tbox {
+	padding-bottom: 1px;
+}
+
+#totals{
+	padding: 3px;
+	margin-bottom :10px;
+	background-color: white;
+	border-radius: 7px;
+  -webkit-border-radius: 7px;
+     -moz-border-radius: 7px;
+          border-radius: 7px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#666666', endColorstr='#333333', GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#totals .smaller {
+	font-size: 14px;
+	color: black;
+}
+
+.pounddonate_button {
+	height: 28px;
+	line-height: 28px;
+	margin: 20px;
+}
+
+#totals .twitter-hashtag-button {
+	vertical-align:top;
+
+}
+
+#totals p {
+	color: grey;
+	font-size: 16px;
+	margin: 20px;
+}
+
+#totals span span {
+	color: red;
+	font-size: 20px;
+}
+
+#totals p.first {
+	color: grey;
+	font-size: 18px;
+}
+
+#totals p.first span {
+	color: red;
+	font-size: 24px;
+}
+
+#explanation{
+	padding: 3px;
+	background-color: white;
+	border-radius: 7px;
+  -webkit-border-radius: 7px;
+     -moz-border-radius: 7px;
+          border-radius: 7px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#666666', endColorstr='#333333', GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#explanation ol {
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 5px;
+	color: #666666;
+}
+
+#explanation li {
+	padding: 10px 5px 10px 0px;
+	
+}
+
+#explanation h4 {
+	font-size:18px;
+	color: grey;
+	font-weight:bold;
+	background-color: lightblue;
+	border-radius: 3px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+
+	padding: 5px;
+	margin: 5px;
+}
+
+#explanation h4.bottom {
+	background-color: lightgrey;
+	font-weight: normal;
+}
+
+
+ul.donate {
+	margin-left: 0px;
+	
+}
+
+ul.donate li {
+	border: 1px solid #DDDDDD;
+	padding: 10px;
+	margin-right: 6px;
+	border-radius: 4px;
+	float:left;
+	display:inline;
+}
+
+.navbar .pull-right {
+	margin-top: 2px;
+}
+
+.navbar .brand {
+	padding: 6px 20px;
+}
+
+.followers_count {
+
+	
+}
+
+.card {
+	width: 100%;
+	margin: 0 10px 10px 0;
+	float:left;
+	display:inline;
+}
+
+.card_inner {
+	text-align: center;
+	background-color: #2c2c2c;
+	color: #ffffff;
+	height: 73px;
+	border-radius: 7px;
+  background-image: -moz-linear-gradient(top, #666666, #333333);
+  background-image: -ms-linear-gradient(top, #666666, #333333);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#666666), to(#333333));
+  background-image: -webkit-linear-gradient(top, #666666, #333333);
+  background-image: -o-linear-gradient(top, #666666, #333333);
+  background-image: linear-gradient(top, #666666, #333333);
+  background-repeat: repeat-x;
+  -webkit-border-radius: 7px;
+     -moz-border-radius: 7px;
+          border-radius: 7px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#666666', endColorstr='#333333', GradientType=0);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card_header .card_inner {
+ text-align: left;
+}
+
+.card img {
+	margin-right: 10px;
+}
+
+.card_inner .twitter-hashtag-button {
+	margin-top: 22px;
+}
+
+.card h4 {
+	color: #666666;
+}
+
+.card h2 {
+	color: white;
+}
+
+h2.card_header {
+	color: #0088CC;
+}
+
+h2.card_header a {
+	color: #ffffff;
+}
+
+.usergrid {
+	border: 1px solid #DDDDDD;
+	padding: 10px;
+	margin-top: 6px;
+	border-radius: 4px;
+}
+
+.usergrid h3 {
+	margin-bottom: 10px;
+}
+
+.hero-unit {
+  background: url('/img/dark_bg.png');
+}
+
+.hero-unit h1 {
+  font-size: 45px;
+}
+
+.navbar .brand {
+	color: #4099FF;
+	font-weight: bold;
+}
+
+.header_info {
+	height: 48px;
+}
+
+td a img {
+  float: left;
+  margin: 0 5px 5px 0;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.paypal img {
+  width: 151px;
+}
+
+div.dataTables_length label {
+    float: left;
+    text-align: left;
+}
+ 
+div.dataTables_length select {
+    width: 75px;
+}
+ 
+div.dataTables_filter label {
+    float: right;
+}
+ 
+div.dataTables_info {
+    padding-top: 8px;
+}
+ 
+div.dataTables_paginate {
+    float: right;
+    margin: 0;
+}
+ 
+table {
+    margin-bottom: 6px !important;
+    clear: both;
+}
+
+.table-striped tbody tr:nth-child(even) td,
+.table-striped tbody tr:nth-child(even) th {
+  background-color: #ffffff;
+}
+
+
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+    cursor: pointer;
+    *cursor: hand;
+}
+ 
+table.table thead .sorting { background: url('../img/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('../img/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('../img/sort_desc.png') no-repeat center right; }
+ 
+table.table thead .sorting_asc_disabled { background: url('../img/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('../img/sort_desc_disabled.png') no-repeat center right; }
+
+.equation {
+  margin: 15px 25px 15px 0px;
+}
+
+.equation h1 {
+  display: inline;
+  margin: 25px;
+}
+.brand {
+font-family: font-family: 'Comfortaa', cursive;	
+}

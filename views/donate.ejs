@@ -1,0 +1,22 @@
+<% pagename = 'donate' %>
+<div class="tabbable">
+	<ul class="nav nav-pills">
+		<% for ( var i=0; i < donate_list.categories.length; i++ ) { %>	
+		<li class="<% if( i==0 ) { %>active<% } %>"><a href="#<%= donate_list.categories[i].key %>" data-toggle="tab"><%= donate_list.categories[i].name %></a></li>
+		<% } %>
+	</ul>
+	<div class="tab-content">
+		<% for ( var i=0; i < donate_list.categories.length; i++ ) { %>
+			<div class="tab-pane<% if( i==0 ) { %> active<% } %>" id="<%= donate_list.categories[i].key %>">
+				<div class="row">
+				<% for ( var j=0; j < donate_list.categories[i].donatees.length; j++ ) { %>
+					<div class="span4">
+						<% twitterUser = donate_list.categories[i].donatees[j] %>
+						<%- partial( 'card' ) %>
+					</div>
+				<% } %>
+				</div>
+			</div>
+		<% } %>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<% total = 0 %>
+<% verb = 'donations' %>
+<% total_incoming = 0 %>
+<% tweet_text = '%241%20to%20@'+twitterUser.username %>
+
+<% if ( user && user.payments_incoming ) { %>
+
+	<% for ( var k=0; k < user.payments_incoming.length; k++ ) { %>
+		<% if( typeof user.payments_incoming[k].pounddonate !='undefined' ) { %>
+			<% total = total + Number(user.payments_incoming[k].pounddonate.amount) %>
+		<% } %>
+	<% } %>
+	
+	<% if ( user.payments_incoming.length == '1' ) { %>
+		<% verb = 'donation' %>
+	<% } %>
+	
+	<% total_incoming = user.payments_incoming.length %>
+
+<% } %>
+
+<% if( isAuthenticated && pagename != 'donate' && twitterUser.username.toLowerCase() == user.username.toLowerCase() ) { %>
+	<% tweet_text = 'RT%20to%20donate%20%241%20to%20me!' %>
+<% } %>
+
+<div class="card card_header clearfix">
+	<div class="card_inner">
+		<a href="/<%= twitterUser.username %>"><img class="pull-left" src="https://api.twitter.com/1/users/profile_image/<%= twitterUser.username %>?size=bigger"/></a>
+
+		<h2 class="card_header">@<a href="/<%= twitterUser.username %>"><%= twitterUser.username %></a></h2>
+		<% if( user.extended_data ) { %><p class="followers_count"><%= user.extended_data[0].followers_count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") %> followers</p><% } %>
+		
+	</div>
+</div><br style="clear:both;"/>

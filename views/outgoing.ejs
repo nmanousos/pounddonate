@@ -1,0 +1,22 @@
+<% total = 0 %>
+<% verb = 'donations' %>
+
+<% if ( twitterUser.payments_outgoing ) { %>			
+	<% for ( var i=0; i < twitterUser.payments_outgoing.length; i++ ) { %>
+		<% if( typeof twitterUser.payments_outgoing[i].pounddonate !='undefined' ) { %>
+			<% total = total + Number(twitterUser.payments_outgoing[i].pounddonate.amount) %>
+		<% } %>
+	<% } %>
+	<% if ( twitterUser.payments_outgoing.length == '1' ) { %>
+		<% verb = 'donation' %>
+	<% } %>
+<% } %>
+
+<div class="usergrid">
+	<h3><%= twitterUser.payments_outgoing.length %> <%= verb %> for $<%= total.toFixed(2) %> sent</h3>
+	<% for ( var i=0; i < twitterUser.payments_outgoing.length; i++ ) { %>
+		<% if( typeof twitterUser.payments_outgoing[i].pounddonate !='undefined' ) { %>
+			<a href="http://twitter.com/<%= twitterUser.payments_outgoing[i].pounddonate.to %>" target="_new"><img src="https://api.twitter.com/1/users/profile_image/<%= twitterUser.payments_outgoing[i].pounddonate.to %>"/></a>
+		<% } %>
+	<% } %>
+</div>

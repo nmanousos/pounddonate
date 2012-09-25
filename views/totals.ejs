@@ -1,0 +1,40 @@
+<% total = 0 %>
+<% verb = 'donators' %>
+<% total_incoming = 0 %>
+
+
+<% if ( user && user.payments_incoming ) { %>
+
+	<% for ( var k=0; k < user.payments_incoming.length; k++ ) { %>
+		<% if( typeof user.payments_incoming[k].pounddonate !='undefined' ) { %>
+			<% total = total + Number(user.payments_incoming[k].pounddonate.amount) %>
+		<% } %>
+	<% } %>
+	
+	<% if ( user.payments_incoming.length == '1' ) { %>
+		<% verb = 'donator' %>
+	<% } %>
+	
+	<% total_incoming = user.payments_incoming.length %>
+
+<% } %>
+
+<% if( total > 0 ) { %>
+		<div id="totals">
+			<p class="first"><span>$<%= total.toFixed(2) %></span> #Donated</p>
+			<% if( user.goal ){ %><p><span><%= user.goal %></span> #Donate goal</p><% } %>
+			<p><span><%= total_incoming %></span> <%= verb %></p>
+			<p><%= explanation %></p>
+			<div class="pounddonate_button"><a href="https://twitter.com/intent/tweet?button_hashtag=donate&text=<%= tweet_text %>" class="twitter-hashtag-button" data-size="large">Tweet #donate</a>
+			<span class="visible-desktop"><i class="icon-arrow-left"></i><span class="smaller"><%= call_to_action %></span></span>
+			</div>
+		</div>
+<% } else { %>
+		<div id="totals">
+			<% if( user.goal ){ %><p><span><%= user.goal %></span> #Donate goal</p><% } %>
+			<p><%= explanation %></p>
+			<div class="pounddonate_button"><a href="https://twitter.com/intent/tweet?button_hashtag=donate&text=<%= tweet_text %>" class="twitter-hashtag-button" data-size="large">Tweet #donate</a>
+			<span class="visible-desktop"><i class="icon-arrow-left"></i><span class="smaller"><%= call_to_action %></span></span>
+			</div>
+		</div>
+<% } %>

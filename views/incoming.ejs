@@ -1,0 +1,40 @@
+<table id="payments" class="table table-bordered table-striped">
+	<thead>
+		<th>Tweet</th>
+		<th>Date</th>
+	</thead>
+	<tbody>
+	<% if ( twitterUser.payments_incoming ) { %>
+		<% for ( var i=0; i < twitterUser.payments_incoming.length; i++ ) { %>
+			<tr>
+				<td>
+
+						<a href="http://twitter.com/<%= twitterUser.payments_incoming[i].user.screen_name %>" target="_new"><img src="<%= twitterUser.payments_incoming[i].user.profile_image_url %>"/></a>
+						<strong>@<a href="http://twitter.com/<%= twitterUser.payments_incoming[i].user.screen_name %>" target="_new"><%= twitterUser.payments_incoming[i].user.screen_name %></a></strong><br/>
+						<i class='icon-plus-sign'></i> <i class='icon-ok-circle'></i><br style="clear:both;"/><span class="tweet"><%= twitterUser.payments_incoming[i].text %></span>
+				
+				</td>
+				<% var date = twitterUser.payments_incoming[i].created_at.split(' ') %>
+				<td><%= date[0] + ' ' + date[1] + ' ' + date[2] + ' ' + date[5] + ', ' + date[3] %></td>
+			</tr>
+		<% } %>
+	<% } %> 
+
+	<% if ( twitterUser.payments_incoming_pending ) { %>
+		<% for ( var i=0; i < twitterUser.payments_incoming_pending.length; i++ ) { %>
+			<tr>
+				<td>
+				
+						<a href="http://twitter.com/<%= twitterUser.payments_incoming_pending[i].user.screen_name %>" target="_new"><img src="<%= twitterUser.payments_incoming_pending[i].user.profile_image_url %>"/></a>
+						<strong>@<a href="http://twitter.com/<%= twitterUser.payments_incoming_pending[i].user.screen_name %>" target="_new"><%= twitterUser.payments_incoming_pending[i].user.screen_name %></a></strong><br/>
+						<i class='icon-plus-sign'></i> <i class='icon-time'></i><br style="clear:both;"/><span class="tweet"><%= twitterUser.payments_incoming_pending[i].text %></span>
+				
+				</td>
+				<% var date = twitterUser.payments_incoming_pending[i].created_at.split(' ') %>
+				<td><%= date[0] + ' ' + date[1] + ' ' + date[2] + ' ' + date[5] + ', ' + date[3] %></td>
+			</tr>
+		<% } %>
+	<% } %>          
+											 
+	</tbody>
+</table>

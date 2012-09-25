@@ -1,0 +1,11 @@
+<% pagename = 'admin' %>
+<h2>@<a href="/<%= twitterUser.username %>"><%= twitterUser.username %></a></h2>
+<% if( twitterUser._id ) { %>
+	<form action="/admin/<%= twitterUser.username %>" method="post">
+		<input type="hidden" name="_method" value="delete" />
+		<input type="submit" class="btn btn-danger" value="Delete"/><p><em>This really will delete the user, it is not undoable.</em></p>
+	</form>
+	<%= twitterUser %><br/>
+<% } else { %>
+	user isnt registered
+<% } %>

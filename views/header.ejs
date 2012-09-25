@@ -1,0 +1,28 @@
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="/"><img src="/img/logo.png" alt="PoundDonate"></a>
+			<ul class="nav">
+				<li class="<% if (pagename == 'donate') { %>active<% } %>"><a href="/donate">Donate</a></li>
+				<li class="<% if (pagename == 'raise') { %>active<% } %>"><a href="/auth/twitter">Raise</a></li>
+				<li class="<% if (pagename == 'faq') { %>active<% } %>"><a href="/faq">FAQ</a></li>
+				<li><a href="http://blog.pounddonate.com" taget="_new">Blog</a></li>
+				<% if( user && user.admin) { %>
+				<li class="<% if (pagename == 'admin') { %>active<% } %>"><a href="/admin">Admin</a></li>
+				<% } %>
+			</ul>			
+			<div class="btn-group pull-right">
+				<% if ( !isAuthenticated ) { %>
+					<a href="/auth/twitter"><img src="/img/sign-in-with-twitter-d.png"></a>
+				<% } else if ( isAuthenticated && typeof user.email === 'undefined' ) { %>
+				<div class="paypal">
+					<a href="/preapproval"><img src="https://www.paypalobjects.com/en_US/Marketing/i/btn/login-with-paypal-button.png"></a>
+				</div>
+				<% } else { %>  
+					<!--<a class="btn" href="/raise">Dashboard</a>//-->
+				<% } %>
+
+			</div>
+		</div>
+	</div>
+</div>
